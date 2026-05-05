@@ -26,7 +26,7 @@ jobs:
     env:
       MY_CPU: rk3399
       MY_VERSION: "25.12"
-      MY_OPENWRT_TAG: "v25.12.2"
+      MY_OPENWRT_TAG: "v25.12.3"
 
     steps:
     - name: Checkout
