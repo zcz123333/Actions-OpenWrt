@@ -1,0 +1,4 @@
+#!/bin/bash
+
+[ -f /root/setup.sh ] && /root/setup.sh all
+[ -f /root/ip_addr.sh ] && /root/ip_addr.sh
