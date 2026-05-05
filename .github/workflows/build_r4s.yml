@@ -105,7 +105,7 @@ jobs:
       run: |
         cd project/openwrt
         set +e
-        timeout 300m make -j$(nproc)
+        timeout 340m make -j$(nproc)
         COMPILE_EXIT_CODE=$?
         set -e
         if [ $COMPILE_EXIT_CODE -eq 124 ]; then
