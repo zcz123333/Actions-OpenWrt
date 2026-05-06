@@ -25,6 +25,7 @@ sed -i 's/CONFIG_TARGET_KERNEL_PARTSIZE=.*/CONFIG_TARGET_KERNEL_PARTSIZE=128/g' 
 sed -i -e 's/CONFIG_IB=y/# CONFIG_IB is not set/g' ../configs/rockchip/01-nanopi
 sed -i -e 's/CONFIG_SDK=y/# CONFIG_SDK is not set/g' ../configs/rockchip/01-nanopi
 echo "CONFIG_CCACHE=y" >> ../configs/rockchip/01-nanopi
+echo "CONFIG_PACKAGE_kmod-tcp-bbr=y" >> ../configs/rockchip/01-nanopi
 
 sed -i 's/=y/=n/g' ../configs/rockchip/02-luci_lang
 sed -i 's/CONFIG_LUCI_LANG_en=n/CONFIG_LUCI_LANG_en=y/' ../configs/rockchip/02-luci_lang

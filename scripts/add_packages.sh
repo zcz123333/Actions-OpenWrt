@@ -45,7 +45,7 @@ EOL
 # add nft-fullcone
 (cd openwrt && {
     merge_package https://github.com/friendlyarm/nft-fullcone nft-fullcone
-    echo "CONFIG_PACKAGE_nft-fullcone=y" >> ../../configs/rockchip/01-nanopi
+    echo "CONFIG_PACKAGE_kmod-nft-fullcone=y" >> ../../configs/rockchip/01-nanopi
 })
 
 # add luci-theme-argon
