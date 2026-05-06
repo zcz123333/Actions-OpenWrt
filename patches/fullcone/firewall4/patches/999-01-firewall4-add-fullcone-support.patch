@@ -96,7 +96,6 @@ index 0000000..121c1c4
 +		meta nfproto {{ fw4.nfproto(family) }} fullcone comment "!fw4: Handle {{
 +		zone.name
 +}} {{ fw4.nfproto(family, true) }} fullcone NAT {{ direction }} traffic"
-\ No newline at end of file
 diff --git a/root/usr/share/ucode/fw4.uc b/root/usr/share/ucode/fw4.uc
 index 690deb0..8416b75 100644
 --- a/root/usr/share/ucode/fw4.uc
