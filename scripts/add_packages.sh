@@ -55,7 +55,9 @@ EOL
 })
 echo "CONFIG_PACKAGE_luci-theme-argon=y" >> ../configs/rockchip/01-nanopi
 sed -i -e 's/function init_theme/function old_init_theme/g' openwrt/target/linux/rockchip/armv8/base-files/root/setup.sh
-cat > /tmp/appendtext.txt <<EOL
+APPEND_TEXT="$(mktemp -t appendtext.XXXXXX)"
+trap 'rm -f "$APPEND_TEXT"' EXIT
+cat > "$APPEND_TEXT" <<EOL
 function init_theme() {
     if uci get luci.themes.Argon >/dev/null 2>&1; then
         uci set luci.main.mediaurlbase="/luci-static/argon"
@@ -63,7 +65,7 @@ function init_theme() {
     fi
 }
 EOL
-sed -i -e '/boardname=/r /tmp/appendtext.txt' openwrt/target/linux/rockchip/armv8/base-files/root/setup.sh
+sed -i -e "/boardname=/r $APPEND_TEXT" openwrt/target/linux/rockchip/armv8/base-files/root/setup.sh
 
 
 (cd openwrt && merge_feed PWpackages "https://github.com/Openwrt-Passwall/openwrt-passwall-packages")
