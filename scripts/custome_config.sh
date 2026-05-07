@@ -15,8 +15,7 @@ sed -i -e '184i\CONFIG_PACKAGE_ddns-scripts-aliyun=y' ../configs/rockchip/01-nan
 sed -i -e '184i\CONFIG_PACKAGE_ddns-scripts-dnspod=y' ../configs/rockchip/01-nanopi
 sed -i '/CONFIG_PACKAGE_luci-app-aria2=y/d' ../configs/rockchip/01-nanopi
 sed -i '/CONFIG_PACKAGE_vsftpd=y/d' ../configs/rockchip/01-nanopi
-# after 25.12 no more nft-qos
-sed -i '/CONFIG_PACKAGE_luci-app-nft-qos=y/d' ../configs/rockchip/01-nanopi
+
 sed -i 's/CONFIG_TARGET_ROOTFS_PARTSIZE=.*/CONFIG_TARGET_ROOTFS_PARTSIZE=1024/g' ../configs/rockchip/01-nanopi
 # append kernel size for backup files
 sed -i 's/CONFIG_TARGET_KERNEL_PARTSIZE=.*/CONFIG_TARGET_KERNEL_PARTSIZE=128/g' ../configs/rockchip/01-nanopi
