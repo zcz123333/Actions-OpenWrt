@@ -20,7 +20,7 @@ sed -i 's/CONFIG_TARGET_ROOTFS_PARTSIZE=.*/CONFIG_TARGET_ROOTFS_PARTSIZE=1024/g'
 # append kernel size for backup files
 sed -i 's/CONFIG_TARGET_KERNEL_PARTSIZE=.*/CONFIG_TARGET_KERNEL_PARTSIZE=128/g' ../configs/rockchip/01-nanopi
 
-# sed -i -e '/CONFIG_MAKE_TOOLCHAIN=y/d' ../configs/rockchip/01-nanopi
+sed -i -e '/CONFIG_MAKE_TOOLCHAIN=y/d' ../configs/rockchip/01-nanopi
 sed -i -e 's/CONFIG_IB=y/# CONFIG_IB is not set/g' ../configs/rockchip/01-nanopi
 sed -i -e 's/CONFIG_SDK=y/# CONFIG_SDK is not set/g' ../configs/rockchip/01-nanopi
 echo "CONFIG_CCACHE=y" >> ../configs/rockchip/01-nanopi
