@@ -1,0 +1,27 @@
+--- a/arch/arm64/boot/dts/rockchip/rk3399.dtsi
++++ b/arch/arm64/boot/dts/rockchip/rk3399.dtsi
+@@ -35,6 +35,10 @@ opp05 {
+ 			opp-hz = /bits/ 64 <1416000000>;
+ 			opp-microvolt = <1125000 1125000 1250000>;
+ 		};
++		opp06 {
++			opp-hz = /bits/ 64 <1512000000>;
++			opp-microvolt = <1150000 1150000 1250000>;
++		};
+ 	};
+ 
+ 	cluster1_opp: opp-table-1 {
+@@ -74,6 +78,10 @@ opp07 {
+ 			opp-hz = /bits/ 64 <1800000000>;
+ 			opp-microvolt = <1200000 1200000 1250000>;
+ 		};
++		opp08 {
++			opp-hz = /bits/ 64 <2016000000>;
++			opp-microvolt = <1250000 1250000 1250000>;
++		};
+ 	};
+ 
+ 	gpu_opp_table: opp-table-2 {
+-- 
+2.54.0
+
