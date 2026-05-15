@@ -8,7 +8,7 @@ sed -i -e '460a\CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Serve
 sed -i -e '460a\CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Client=n' ../configs/rockchip/01-nanopi
 sed -i -e '460a\CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus=n' ../configs/rockchip/01-nanopi
 sed -i -e '460a\CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=n' ../configs/rockchip/01-nanopi
-sed -i -e '243i\CONFIG_PACKAGE_keepalived=y' ../configs/rockchip/01-nanopi
+sed -i -e '243i\CONFIG_PACKAGE_keepalived=m' ../configs/rockchip/01-nanopi
 sed -i -e '184i\CONFIG_PACKAGE_ddns-scripts-cloudflare=y' ../configs/rockchip/01-nanopi
 sed -i -e '184i\CONFIG_PACKAGE_ddns-scripts-godaddy=y' ../configs/rockchip/01-nanopi
 sed -i -e '184i\CONFIG_PACKAGE_ddns-scripts-aliyun=y' ../configs/rockchip/01-nanopi
