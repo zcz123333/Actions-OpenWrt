@@ -106,11 +106,11 @@ jobs:
       run: |
         cd project/openwrt
         set +e
-        timeout 350m make -j$(nproc)
+        timeout 340m make -j$(nproc)
         COMPILE_EXIT_CODE=$?
         set -e
         if [ $COMPILE_EXIT_CODE -eq 124 ]; then
-          echo "::warning::suspend after compile for 350m."
+          echo "::warning::suspend after compile for 340m."
           echo "::warning::manually trigger workflow to continue."
           echo "timeout=true" >> $GITHUB_OUTPUT
           exit 0
