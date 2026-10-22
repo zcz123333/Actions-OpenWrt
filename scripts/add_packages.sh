@@ -140,7 +140,7 @@ sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' 
 (
     cd openwrt && {
         rm -rf feeds/packages/lang/golang
-        git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
+        git clone https://github.com/sbwml/packages_lang_golang -b 27.x feeds/packages/lang/golang
     }
 )
 
