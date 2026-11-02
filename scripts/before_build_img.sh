@@ -19,6 +19,6 @@ rsync -a --no-o --no-g --progress ../patches/fullcone/libnftnl/patches/ openwrt/
 sed -i '/PKG_INSTALL:=/iPKG_FIXUP:=autoreconf' openwrt/package/libs/libnftnl/Makefile
 
 # bbrv3
-git clone --depth=1 --single-branch -b ${MY_VERSION} https://github.com/QiuSimons/YAOF.git yaof
+git clone --depth=1 --single-branch --revision=21d65ea2202c34feafc18d61329f7ef3645f13eb https://github.com/QiuSimons/YAOF.git yaof
 cp -rf yaof/PATCH/kernel/bbr3/* openwrt/target/linux/generic/backport-6.12/
 rm -rf yaof
