@@ -11,6 +11,7 @@ fi
 
 # patchs
 rsync -a --no-o --no-g --progress ../patches/patches-6.12/ openwrt/target/linux/rockchip/patches-6.12/
+rsync -a --no-o --no-g --progress ../patches/backport-6.12/ openwrt/target/linux/generic/backport-6.12/
 # fullcone
 rsync -a --no-o --no-g --progress ../patches/fullcone/firewall4/patches/ openwrt/package/network/config/firewall4/patches/
 rsync -a --no-o --no-g --progress ../patches/fullcone/nftables/patches/ openwrt/package/network/utils/nftables/patches/
